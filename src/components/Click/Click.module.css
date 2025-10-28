@@ -1,0 +1,35 @@
+/* .container {
+  background-color: #111;
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  width: 200px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.count {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+  color: rgba(255, 0, 0, 0.381);
+} */
+
+.container {
+  background-color: rgb(32, 39, 44);
+
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  width: 100px;
+  margin: 2rem auto;
+}
+
+.count {
+  font-size: 3rem;
+  margin: 2rem auto;
+  font-weight: bold;
+  color: red;
+}

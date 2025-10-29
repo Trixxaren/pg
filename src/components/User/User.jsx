@@ -23,16 +23,16 @@ import React from "react";
 
 const User = () => {
   const array = ["Robin", "Emmma", "Alfons"];
-
   const object = [
     { id: 1, name: "Robin" },
     { id: 2, name: "Emma" },
   ];
+  const array2 = [...array, "Rickard", "G", "Dennis", 22];
 
   return (
     <div>
       <div>
-        {array.map((name, index) => {
+        {array2.map((name, index) => {
           return (
             <h3>
               index: {index}.<br /> Namn: {name}

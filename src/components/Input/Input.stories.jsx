@@ -6,7 +6,9 @@ export default {
 };
 
 export const Default = () => {
-  <div>
-    <Input />
-  </div>;
+  return (
+    <div>
+      <Input />
+    </div>
+  );
 };

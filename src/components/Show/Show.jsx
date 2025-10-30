@@ -4,21 +4,26 @@ import { useState } from "react";
 const Show = () => {
   const [toggle, setToggle] = useState(true);
 
-  const handleClick = () => {
-    setToggle(!toggle);
-    // gör så att den togglar från true till false
-  };
-
-  if (!toggle) {
-    console.log("ej synlig"); //detta är alltså false {!toggle}
-  } else {
-    console.log("synlig"); // Detta är alltså true {toggle}
-  }
+  const handleClick = () => setToggle(!toggle); // växlar mellan true/false i början är den trudy (true)
 
   return (
     <div>
-      <button onClick={handleClick}>Klicka</button>
-      {toggle ? <p>Synlig text</p> : null}
+      <button onClick={handleClick}>Klicka på mig</button>
+      {toggle ? (
+        <div
+          style={{
+            backgroundColor: "green",
+          }}
+        >
+          <p
+            style={{
+              color: "white",
+            }}
+          >
+            jag syns{" "}
+          </p>
+        </div>
+      ) : null}
     </div>
   );
 };

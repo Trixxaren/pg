@@ -1,0 +1,80 @@
+.app {
+  max-width: 360px;
+  margin: 40px auto;
+  padding: 16px;
+  text-align: center;
+  background: #fafafa;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  font-family: system-ui, sans-serif;
+}
+
+.title {
+  margin-bottom: 16px;
+  color: #111827;
+}
+
+.input {
+  padding: 10px;
+  width: 70%;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+}
+
+.addBtn {
+  padding: 10px;
+  margin-left: 6px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.addBtn:hover {
+  background: #163ca5;
+}
+
+.deleteBtn {
+  background-color: white;
+  color: #991b1b;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 4px 8px;
+  font-size: 14px;
+}
+
+.deleteBtn:hover {
+  background: #fecaca98;
+}
+
+.deletAllBtn {
+  padding: 10px;
+  margin-left: 6px;
+  border: none;
+  background: #c39494;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.deletAllBtn:hover {
+  background: #c394944e;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin-top: 16px;
+}
+
+.item {
+  display: flex; /* lägg text och knapp på samma rad */
+  justify-content: space-between; /* tryck ut dem åt varsin sida */
+  align-items: center; /* centrera vertikalt */
+  background: white;
+  padding: 8px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}

@@ -7,12 +7,18 @@ const Toggle = () => {
   const handleClick = () => {
     setToggle(!toggle);
     // växlar värdet från true till false och tvärtom
+
+    if (!toggle) {
+      console.log("Texten syns!");
+    } else {
+      console.log("Texten syns inte!");
+    }
   };
 
   return (
     <div>
       <button onClick={handleClick}>klicka</button>
-      {toggle ? <p>Synlig text</p> : null}
+      {toggle ? <p>Synlig text</p> : console.log("console: XXX")}
     </div>
   );
 };

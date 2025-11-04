@@ -1,49 +1,4 @@
-// import React, { useState } from "react";
 import styles from "./TodoApp.module.css";
-
-// const TodoApp = () => {
-//   const [todo, setTodo] = useState([]);
-//   const [text, setText] = useState("");
-
-//   const handleAdd = () => {
-//     const trimmed = text.trim();
-//     // om inget är skrivet, gör inget
-//     if (trimmed === "") return;
-//     // ny listta med den nya uppgiften längst upp
-//     setTodo([trimmed, ...todo]);
-
-//     // tömmer inputfältet efter
-//     setText("");
-//   };
-
-//   return (
-//     <div className={styles.app}>
-//       <h2 className={styles.title}>Todo Lista</h2>
-
-//       <input
-//         className={styles.input}
-//         value={text}
-//         placeholder="skriv en uppgift"
-//         onChange={(e) => setText(e.target.value)}
-//       />
-//       <button className={styles.addBtn} onClick={handleAdd}>
-//         Lägg till todo
-//       </button>
-
-//       <ul className={styles.list}>
-//         {todo.map((todo, index) => {
-//           return (
-//             <li key={index} className={styles.item}>
-//               {todo}
-//             </li>
-//           );
-//         })}
-//       </ul>
-//     </div>
-//   );
-// };
-
-// export default TodoApp;
 
 import React, { useState } from "react";
 
@@ -59,21 +14,18 @@ const TodoApp = () => {
     setTodo([trimmed, ...todo]);
 
     setText("");
+    console.log(todo);
   };
   const handleDelete = (index) => {
-    const copy = [...todo];
-    copy.splice(index, 1);
-    setTodo(copy);
+    setTodo(todo.filter((_, i) => i !== index));
   };
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") handleAdd();
   };
 
-  const deleteAll = (index) => {
-    const copy = [...todo];
-    copy.splice(index);
-    setTodo(copy);
+  const deleteAll = () => {
+    setTodo([]);
   };
 
   return (
@@ -90,11 +42,14 @@ const TodoApp = () => {
         Lägg till
       </button>
       <ul className={styles.list}>
-        {todo.map((todo, index) => {
+        {todo.map((item, index) => {
           return (
             <li className={styles.item} key={index}>
-              {todo}
-              <button onClick={handleDelete} className={styles.deleteBtn}>
+              {item}
+              <button
+                onClick={() => handleDelete(index)}
+                className={styles.deleteBtn}
+              >
                 ❌
               </button>
             </li>
@@ -108,4 +63,5 @@ const TodoApp = () => {
   );
 };
 
+console.log(index);
 export default TodoApp;

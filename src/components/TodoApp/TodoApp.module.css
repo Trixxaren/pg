@@ -26,14 +26,15 @@
   padding: 10px;
   margin-left: 6px;
   border: none;
-  background: #2563eb;
+  background: #0d860f;
+  border: 1px solid rgb(97, 93, 93);
   color: white;
   border-radius: 8px;
   cursor: pointer;
 }
 
 .addBtn:hover {
-  background: #163ca5;
+  background: #085d09;
 }
 
 .deleteBtn {
@@ -43,6 +44,7 @@
   cursor: pointer;
   padding: 4px 8px;
   font-size: 14px;
+  border: 1px solid rgb(97, 93, 93);
 }
 
 .deleteBtn:hover {
@@ -51,15 +53,15 @@
 
 .deletAllBtn {
   padding: 10px;
-  margin-left: 6px;
   border: none;
-  background: #c39494;
+  background: #a42c2c;
   color: white;
   border-radius: 8px;
   cursor: pointer;
+  border: 1px solid rgb(97, 93, 93);
 }
 .deletAllBtn:hover {
-  background: #c394944e;
+  background: #a42c2c9c;
 }
 
 .list {

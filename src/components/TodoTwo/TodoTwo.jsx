@@ -22,8 +22,7 @@ const TodoTwo = () => {
 
   const handleDelete = (index) => {
     setTodo(todo.filter((_, i) => i !== index));
-    // const deletedItem = todo[index]; // hämtar todo-texten på den platsen
-    // console.log(`raderade: ${deletedItem}`);
+
     console.log(`raderade: ${todo[index]}på index ${index + 1}`);
   };
 

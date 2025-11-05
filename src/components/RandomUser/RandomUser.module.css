@@ -57,3 +57,22 @@
   font-weight: bold;
   margin-top: 0.5rem;
 }
+
+.loading {
+  color: #555;
+  font-style: italic;
+  margin-top: 0.8rem;
+  animation: pulse 1s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}

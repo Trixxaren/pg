@@ -17,20 +17,25 @@ const Random = () => {
   };
 
   const fetchFive = () => {
+    setIsloading(true);
     fetch("https://randomuser.me/api/?results=5")
       .then((res) => res.json())
       .then((data) => {
         setUsers(data.results);
       })
-      .catch((err) => console.log("fel vid hämtning (5)", err));
+      .catch((err) => console.log("fel vid hämtning (5)", err))
+      .finally(() => setIsloading(false));
   };
 
   const fetchTwo = () => {
+    setIsloading(true);
     fetch("https://randomuser.me/api/?results=2")
       .then((res) => res.json())
       .then((data) => {
-        setUsers;
-      });
+        setUsers(data.results);
+      })
+      .catch((err) => console.log("fel vid hämtning (2)", err))
+      .finally(() => setIsloading(false));
   };
 
   return (
@@ -38,7 +43,6 @@ const Random = () => {
       <h3>Random person</h3>
       <button onClick={fetchUser}>{isloading ? "hämtar..." : "hämta 1"}</button>
 
-      {/* Liten loading-text för en person */}
       {isloading && !user && <p style={{ marginTop: 8 }}>Laddar person…</p>}
 
       {user && !isloading && (
@@ -50,7 +54,21 @@ const Random = () => {
         </div>
       )}
 
-      <button onClick={fetchFive}>Hämta 5</button>
+      <button onClick={fetchFive}>
+        {isloading ? "Hämtar 5..." : "Hämta 5"}
+      </button>
+      <div>
+        {users.map((person) => (
+          <div key={person.login.uuid}>
+            <img src={person.picture.large} />
+            <h3>
+              {person.name.first} {person.name.last}
+            </h3>
+          </div>
+        ))}
+      </div>
+
+      <button onClick={fetchTwo}>{isloading ? "Hämtar 2.." : "Hämta"}</button>
       <div>
         {users.map((person) => (
           <div key={person.login.uuid}>

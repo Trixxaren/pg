@@ -12,7 +12,7 @@ const LiveInput = () => {
       <h3>Live demo input</h3>
       <input
         type="text"
-        placeholder="skriv ditt namn.."
+        placeholder="skriv ditt namn..."
         onChange={handleChange}
       />
       <div>

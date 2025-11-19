@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const Timer = () => {
   const [seconds, setSeconds] = useState(0);
-  const [isRunning, setIsRunning] = useState(false); // styr start/stopp
+  const [isRunning, setIsRunning] = useState(false); // styr start & stop knapp med en boolean
 
   useEffect(() => {
     if (!isRunning) return; // om vi inte kör, gör ingenting
@@ -20,7 +20,7 @@ const Timer = () => {
 
       <button onClick={() => setIsRunning(true)}>Starta</button>
       <button onClick={() => setIsRunning(false)}>Stoppa</button>
-      <button onClick={() => setSeconds(0)}>Reseta</button>
+      <button onClick={() => setSeconds(0)}>Reseta tid</button>
     </div>
   );
 };
